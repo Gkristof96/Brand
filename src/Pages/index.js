@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Hero from '../components/HeroSection'
 import Navbar from '../components/Navbar'
 import Topbar from '../components/Topbar'
+import Trainers from '../components/TrainersSection'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -12,6 +13,7 @@ const Home = () => {
             <Navbar isOpen={isOpen} handleOpen={handleOpen} />
             <Topbar isOpen={isOpen}/>
             <Hero />
+            <Trainers />
         </>
     )
 }
