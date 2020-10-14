@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+header {
+  background-color: #252a34;
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
+}
+
+header .nav {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+}
+
+header .nav__logo img {
+  width: 60px;
+  height: 60px;
+}
+
+header .nav__logo h1 {
+  margin-left: 10px;
+}
+
+header .nav__logo h1 a {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+header .nav__hamburger {
+  display: none;
+}
+
+header .nav__navbar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+header .nav__navbar .menu__item {
+  margin: 0 25px;
+}
+
+header .nav__navbar .menu__link {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+header .nav__navbar .menu__link:hover {
+  color: #ff2e63;
+}
+
+@media screen and (max-width: 768px) {
+  header .nav__hamburger {
+    display: block;
+    color: #eaeaea;
+    font-size: 24px;
+  }
+  header .nav__navbar {
+    display: none;
+  }
+}
+
+.topbar {
+  width: 100%;
+  max-height: 300px;
+  position: absolute;
+  left: 0;
+  top: -300px;
+  background-color: #252a34;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.topbar__menu {
+  width: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topbar__item {
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.topbar__link {
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+.topbar__link:hover {
+  color: #ff2e63;
+}
+
+.topbar.open {
+  -webkit-transform: translateY(380px);
+          transform: translateY(380px);
+}
+
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-container .hero-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-container .hero-content {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+}
+
+.hero-container .hero-content__title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  color: #eaeaea;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 4.5rem;
+}
+
+.hero-container .hero-content__title span {
+  color: #ff2e63;
+}
+
+.hero-container .hero-content__btn {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  color: #eaeaea;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  background: #ff2e63;
+  height: 50px;
+  width: 150px;
+  border: none;
+}
+
+.hero-container .hero-content__btn:hover {
+  background: #fa003f;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container .hero-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 24px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+/*# sourceMappingURL=style.css.map */
