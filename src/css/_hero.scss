@@ -2,29 +2,23 @@
     width: 100%;
     height: 100vh;
     position: relative;
-
-    .hero-background {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-
+    background: linear-gradient(
+        135deg,
+        rgba(37, 42, 52, 0.4) 0%,
+        rgba(40, 45, 55, 0.4) 100%
+      ),url('background.jpg') center no-repeat; 
+    background-size: cover;
     .hero-content {
         width: 80%;
         margin: 0 auto;
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 81px 2fr 1fr;
         
         &__title {
             grid-column: 1/2;
-            grid-row: 1/2;
+            grid-row: 2/3;
             color: #eaeaea;
             align-self: center;
             font-size: 4.5rem;
@@ -36,7 +30,7 @@
 
         &__btn {
             grid-column: 1/2;
-            grid-row: 2/3;
+            grid-row: 3/4;
             color: #eaeaea;
             padding: 10px 0;
             text-align: center;
@@ -56,6 +50,9 @@
     .hero-container{
         .hero-content {
             grid-template-columns: 1fr;
+            &__title {
+                font-size: 3rem;
+            }
         }
     }
 }

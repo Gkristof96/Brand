@@ -5,6 +5,7 @@ import Topbar from '../components/Topbar'
 import Trainers from '../components/TrainersSection'
 import Prices from '../components/PriceSection'
 import Contact from '../components/ContactSection'
+import Footer from '../components/Footer'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -13,11 +14,12 @@ const Home = () => {
     return (
         <>
             <Navbar isOpen={isOpen} handleOpen={handleOpen} />
-            <Topbar isOpen={isOpen}/>
+            <Topbar isOpen={isOpen} toggle={handleOpen}/>
             <Hero />
             <Trainers />
             <Prices />
             <Contact />
+            <Footer />
         </>
     )
 }
