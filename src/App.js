@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import Home from './Pages/index'
 import './css/style.css'
 
-function App() {
+const App = () => {
   return (
     <>
       <Home />

@@ -129,6 +129,7 @@ header.scrolled {
 }
 
 .topbar__link {
+  padding: 10px 45%;
   color: #eaeaea;
   text-decoration: none;
 }
@@ -195,6 +196,8 @@ header.scrolled {
   height: 50px;
   width: 150px;
   border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .hero-container .hero-content__btn:hover {

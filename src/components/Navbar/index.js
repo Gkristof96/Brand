@@ -2,30 +2,32 @@ import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-scroll'
  
-const Navbar = ({handleOpen, isOpen}) => {
+const Navbar = ({toggle, isOpen}) => {
     const [scroll, setScroll] = useState(false);
 
-    const  changeNav = () => {
-        if(window.scrollY >= 80) {
-            setScroll(true)
-        }
-        else {
-            setScroll(false)
-        }
-    }
     useEffect(() => {
+        const  changeNav = () => {
+            if(window.scrollY >= 80) {
+                setScroll(true)
+            }
+            else {
+                setScroll(false)
+            }
+        }
+
         window.addEventListener('scroll',changeNav)
     },[])
+    
     return (
         <>
-            <header className={`${scroll ? 'scrolled' : ''}`}>
+            <header className={`${scroll || isOpen ? 'scrolled' : ''}`}>
                 <nav className='nav'>
                     <div className='nav__logo'>
                         <img src='images/health.png' alt='logo' />
                         <h1><Link smooth={true} duration={500} spy={true} exact="true" offset={-81} className='menu__link' to='home'>Cross Gym</Link></h1>
                     </div>
                     <div className='nav__hamburger'>
-                        {isOpen ? <FaTimes onClick={() => handleOpen()}/> : <FaBars onClick={() => handleOpen()}/>}
+                        {isOpen ? <FaTimes onClick={toggle}/> : <FaBars onClick={toggle}/>}
                     </div>
                     <div className='nav__navbar'>
                         <ul className='menu'>

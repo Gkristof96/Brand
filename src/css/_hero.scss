@@ -1,58 +1,61 @@
 .hero-container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background: linear-gradient(
-        135deg,
-        rgba(37, 42, 52, 0.4) 0%,
-        rgba(40, 45, 55, 0.4) 100%
-      ),url('background.jpg') center no-repeat; 
-    background-size: cover;
-    .hero-content {
-        width: 80%;
-        margin: 0 auto;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 81px 2fr 1fr;
-        
-        &__title {
-            grid-column: 1/2;
-            grid-row: 2/3;
-            color: #eaeaea;
-            align-self: center;
-            font-size: 4.5rem;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(
+      135deg,
+      rgba(37, 42, 52, 0.4) 0%,
+      rgba(40, 45, 55, 0.4) 100%
+    ),
+    url("background.jpg") center no-repeat;
+  background-size: cover;
+  .hero-content {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 81px 2fr 1fr;
 
-            span {
-                color: #ff2e63;
-            }
-        }
+    &__title {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      color: #eaeaea;
+      align-self: center;
+      font-size: 4.5rem;
 
-        &__btn {
-            grid-column: 1/2;
-            grid-row: 3/4;
-            color: #eaeaea;
-            padding: 10px 0;
-            text-align: center;
-            text-decoration: none;
-            background: #ff2e63;
-            height: 50px;
-            width: 150px;
-            border: none;
-            &:hover {
-                background: darken(#ff2e63,10%);
-            }
-        }
+      span {
+        color: #ff2e63;
+      }
     }
+
+    &__btn {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      color: #eaeaea;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background: #ff2e63;
+      height: 50px;
+      width: 150px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        background: darken(#ff2e63, 10%);
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .hero-container{
-        .hero-content {
-            grid-template-columns: 1fr;
-            &__title {
-                font-size: 3rem;
-            }
-        }
+  .hero-container {
+    .hero-content {
+      grid-template-columns: 1fr;
+      &__title {
+        font-size: 3rem;
+      }
     }
+  }
 }

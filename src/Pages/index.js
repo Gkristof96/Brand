@@ -13,7 +13,7 @@ const Home = () => {
     const handleOpen = () => setIsOpen(!isOpen)
     return (
         <>
-            <Navbar isOpen={isOpen} handleOpen={handleOpen} />
+            <Navbar isOpen={isOpen} toggle={handleOpen} />
             <Topbar isOpen={isOpen} toggle={handleOpen}/>
             <Hero />
             <Trainers />

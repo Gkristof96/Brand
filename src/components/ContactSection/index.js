@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState} from 'react'
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'
 
 const Contact = () => {
-
+    const [values, setValues] = useState({
+        email: '',
+        name: '',
+        message: ''
+    })
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('send')
@@ -23,15 +27,15 @@ const Contact = () => {
                     <form className='contact-content__card' onSubmit={handleSubmit}>
                     <div className="input-group">
                         <label>Name</label>
-                        <input type="text" name='name'/>
+                        <input type="text" name='name' value={values.name} onChange={(e) => setValues({...values, name: e.target.value})}/>
                     </div>
                     <div className="input-group">
                         <label>Email</label>
-                        <input type="text"  name='emaiL'/>
+                        <input type="text"  name='email'value={values.email} onChange={(e) => setValues({...values, email: e.target.value})}/>
                     </div>
                     <div className="input-group">
                         <label>Subject</label>
-                        <textarea name='message'/>
+                        <textarea name='message' value={values.message} onChange={(e) => setValues({...values, message: e.target.value})}/>
                     </div>
                     <input type="submit" className="btn" value='Send'/>
                     </form>
